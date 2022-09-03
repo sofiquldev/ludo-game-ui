@@ -12,131 +12,139 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="stylesheet" href="res/css/style.css">
 
-    <title>ludu - HTML5 Game UI</title>
+    <title>ludo - HTML5 Game UI</title>
 </head>
 
 <body>
-    <div class="ludu__container">
-        <div class="board" style="--board-color: red">
-            <div class="board__home">
-                <img src="res/images/avatars/01.webp" alt="avatar" class="board__home__avatar">
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-            </div>
+    <div class="ludo__wrapper">
+        <!-- 
+            red: red
+            yellow: #ffa500
+            green: green
+            blue: blue
+         -->
+         <div class="ludo__home red">
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+         </div>
+         <div class="ludo__path yellow">
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item home"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item star"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
+
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
+
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
+         </div>
+         <div class="ludo__home yellow">
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
         </div>
-        <div class="board" style="--board-color: #ffca00">
-            <div class="board__home">
-                <img src="res/images/avatars/02.webp" alt="avatar" class="board__home__avatar">
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-            </div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+         <div class="ludo__path horizontal red">
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item home"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item star"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+         </div>
+         <div class="ludo__center"></div>
+         <div class="ludo__path horizontal green">
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item star"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
+
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item home"></div>
+            <div class="ludo__path__item"></div>
         </div>
-        <div class="board" style="--board-color: green">
-            <div class="board__home">
-                <img src="res/images/avatars/03.webp" alt="avatar" class="board__home__avatar">
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-            </div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+         <div class="ludo__home blue">
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
         </div>
-        <div class="board" style="--board-color: blue">
-            <div class="board__home">
-                <img src="res/images/avatars/04.webp" alt="avatar" class="board__home__avatar">
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-                <div class="board__home__item"></div>
-            </div>
+         <div class="ludo__path blue">
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
 
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
-            <div class="board__box"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item star"></div>
+
+            <div class="ludo__path__item home"></div>
+            <div class="ludo__path__item final"></div>
+            <div class="ludo__path__item"></div>
+
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
+            <div class="ludo__path__item"></div>
         </div>
+         <div class="ludo__home green">
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+            <div class="ludo__home__item"></div>
+        </div>
+
     </div>
 
 
