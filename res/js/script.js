@@ -1,4 +1,1 @@
-
-var tas = $('.board__box')[22]
-
-console.log(tas);
+import {gameStart,throwDice} from "./LudoFunc.js";

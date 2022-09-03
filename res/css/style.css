@@ -1048,10 +1048,26 @@ input[type=checkbox] ~ label .icon {
   aspect-ratio: 1/1;
   border-radius: 4px;
   border: 1px solid var(--board-color, black);
+  background-color: transparent;
   position: relative;
 }
 .board__box:nth-of-type(3), .board__box:nth-of-type(n+9):nth-of-type(-n+13) {
+  -webkit-backdrop-filter: blur(1);
+          backdrop-filter: blur(1);
+}
+.board__box:nth-of-type(3)::before, .board__box:nth-of-type(n+9):nth-of-type(-n+13)::before {
+  content: "";
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
   background-color: var(--board-color, black);
+  -webkit-filter: opacity(0.15);
+          filter: opacity(0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .board__box:nth-of-type(16) {
   background-color: darkgrey;
