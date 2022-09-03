@@ -1134,6 +1134,7 @@ input[type=checkbox] ~ label .icon {
   border-radius: 16px;
   -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 .ludo__home {
   -ms-flex-preferred-size: 40%;
@@ -1141,13 +1142,37 @@ input[type=checkbox] ~ label .icon {
   aspect-ratio: 1/1;
   background-color: transparent;
   padding: 4%;
+  position: relative;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 4px solid white;
   border-radius: 12px;
+}
+.ludo__home__avatar {
+  width: 25%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background: #333333;
+  border: 4px solid white;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 .ludo__home__item {
   width: 65%;
@@ -1179,6 +1204,12 @@ input[type=checkbox] ~ label .icon {
 .ludo__home.blue > div {
   background-color: blue;
 }
+.ludo__home:hover {
+  padding: 2%;
+}
+.ludo__home:hover .ludo__home__avatar {
+  width: 35%;
+}
 .ludo__path {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
@@ -1191,6 +1222,34 @@ input[type=checkbox] ~ label .icon {
   border: 1px solid rgba(51, 51, 51, 0.5);
   border-radius: 4px;
   margin: 2px;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+.ludo__path__item::before {
+  content: "";
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+  pointer-events: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 .ludo__path.red .ludo__path__item.home, .ludo__path.red .ludo__path__item.star {
   background-color: rgba(255, 0, 0, 0.75);
@@ -1198,11 +1257,17 @@ input[type=checkbox] ~ label .icon {
 .ludo__path.red .ludo__path__item.final {
   background-color: rgba(255, 0, 0, 0.25);
 }
+.ludo__path.red .ludo__path__item:hover::before {
+  background-color: rgba(255, 0, 0, 0.5);
+}
 .ludo__path.yellow .ludo__path__item.home, .ludo__path.yellow .ludo__path__item.star {
   background-color: rgba(255, 165, 0, 0.75);
 }
 .ludo__path.yellow .ludo__path__item.final {
   background-color: rgba(255, 165, 0, 0.25);
+}
+.ludo__path.yellow .ludo__path__item:hover::before {
+  background-color: rgba(255, 165, 0, 0.5);
 }
 .ludo__path.green .ludo__path__item.home, .ludo__path.green .ludo__path__item.star {
   background-color: rgba(0, 128, 0, 0.75);
@@ -1210,11 +1275,17 @@ input[type=checkbox] ~ label .icon {
 .ludo__path.green .ludo__path__item.final {
   background-color: rgba(0, 128, 0, 0.25);
 }
+.ludo__path.green .ludo__path__item:hover::before {
+  background-color: rgba(0, 128, 0, 0.5);
+}
 .ludo__path.blue .ludo__path__item.home, .ludo__path.blue .ludo__path__item.star {
   background-color: rgba(0, 0, 255, 0.75);
 }
 .ludo__path.blue .ludo__path__item.final {
   background-color: rgba(0, 0, 255, 0.25);
+}
+.ludo__path.blue .ludo__path__item:hover::before {
+  background-color: rgba(0, 0, 255, 0.5);
 }
 .ludo__path.horizontal {
   -ms-flex-preferred-size: 40%;
